@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>QR Code 2</title>
+  <script>
+    const progress = localStorage.getItem("qr_progress");
+    if (progress === "1") {
+      localStorage.setItem("qr_progress", "2");
+    } else {
+      document.write("<h1>Falsch, gehe woanders hin</h1>");
+      throw new Error("Falsche Reihenfolge");
+    }
+  </script>
+</head>
+<body>
+  <h1>Richtig, gehe weiter</h1>
+  <img src="https://via.placeholder.com/150" alt="Bild">
+</body>
+</html>
